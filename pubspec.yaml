@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  flutter_flavorizr: ^2.1.4
   flutter_test:
     sdk: flutter
 
@@ -46,6 +47,33 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+    ios:
+
+  flavors:
+    development:
+      app:
+        name: "Development"
+
+      android:
+        applicationId: "com.misasrd.dev"
+
+      ios:
+        bundleId: "com.misasrd.dev"
+
+    production:
+      app:
+        name: "Production"
+
+      android:
+        applicationId: "com.misasrd.production"
+      ios:
+        bundleId: "com.misasrd.production"
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
