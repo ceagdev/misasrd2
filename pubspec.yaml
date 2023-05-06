@@ -29,6 +29,7 @@ dependencies:
   flutter_riverpod: ^2.3.6
   equatable: ^2.0.3
   http: ^0.13.0
+  connectivity: ^3.0.6
 
 dev_dependencies:
   flutter_flavorizr: ^2.1.4
