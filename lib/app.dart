@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:misasrd2/welcomescreen/presentation/pages/splash_screen.dart';
 import 'main.dart';
 import 'themes/my_theme.dart';
 
@@ -14,7 +15,7 @@ class App extends StatelessWidget {
       title: F.title,
       theme: MyTheme.lightTheme,
       home: _flavorBanner(
-        child: MyHomePage(title: F.title,),
+        child: SplashScreen(),
         show: kDebugMode,
       ),
     );
