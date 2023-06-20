@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:misasrd2/welcomescreen/presentation/pages/splash_screen.dart';
 import 'main.dart';
 import 'themes/my_theme.dart';

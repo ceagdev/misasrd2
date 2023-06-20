@@ -9,7 +9,7 @@ abstract class ParroquiaRepository {
   Future<List<Parroquia>> getIglesias();
 }
 
-class IglesiaRepositoryImpl implements ParroquiaRepository {
+class ParroquiaRepositoryImpl implements ParroquiaRepository {
   // // final FirebaseFirestore firestore;
   //
   // // IglesiaRepositoryImpl({required this.firestore});

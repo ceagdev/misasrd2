@@ -1,13 +1,20 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../entities/iglesia.dart';
 import '../repositories/parroquias_repository.dart';
 
-class GetIglesias {
+class GetIglesiasUseCase {
   final ParroquiaRepository repository;
 
-  GetIglesias(this.repository);
+  GetIglesiasUseCase(this.repository);
 
-  Future<List<Parroquia>> call() async {
-    return await repository.getIglesias();
+  Future<AsyncValue<List<Parroquia>>> call() async {
+    try {
+       final parroquias = await repository.getIglesias();
+       return AsyncValue.data(parroquias);
+    } catch (error) {
+      return AsyncValue.error(error, StackTrace.current);
+    }
   }
-}
 
+}

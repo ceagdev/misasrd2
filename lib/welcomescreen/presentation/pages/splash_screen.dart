@@ -24,13 +24,13 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<Timer> loadData() async {
-    return Timer(const Duration(seconds: 3), onDoneLoading);
+    return Timer(const Duration(seconds: 5), onDoneLoading);
   }
 
   onDoneLoading() async {
     await Navigator.of(context).pushReplacement(
       // MaterialPageRoute(builder: (context) => const ListaIglesiasScreen()),
-      MaterialPageRoute(builder: (context) => MyHomePage(title: F.title)),
+      MaterialPageRoute(builder: (context) => const ListaIglesiasScreen()),
     );
 
   }
@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Splash Screen'),
+        child: Text('Bienvenido'),
       ),
     );
   }
