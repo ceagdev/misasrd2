@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 // import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:lista_iglesias/core/errors/exceptions.dart';
@@ -33,10 +34,16 @@ class ParroquiaRepositoryImpl implements ParroquiaRepository {
          ),
       );
       if (response.statusCode == 200) {
-        print("Sucess with Code:"'${response.statusCode}');
+        if (kDebugMode) {
+          print("Sucess with Code:"'${response.statusCode}');
+        }
         final body = json.decode(response.body) as List;
-        print("---- BODY ----");
-        print(body);
+        if (kDebugMode) {
+          print("---- BODY ----");
+        }
+        if (kDebugMode) {
+          print(body);
+        }
         return body.map((dynamic json) {
           final map = json as Map<String, dynamic>;
           return Parroquia(

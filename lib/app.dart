@@ -1,8 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:misasrd2/constants/contants.dart';
 import 'package:misasrd2/welcomescreen/presentation/pages/splash_screen.dart';
-import 'main.dart';
 import 'themes/my_theme.dart';
 
 import 'flavors/flavors.dart';
@@ -13,10 +12,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: F.title,
+      title: AppStrings.appName,
       theme: MyTheme.lightTheme,
       home: _flavorBanner(
-        child: SplashScreen(),
+        child: const SplashScreen(),
         show: kDebugMode,
       ),
     );

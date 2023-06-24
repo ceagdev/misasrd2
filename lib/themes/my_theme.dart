@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class MyTheme {
   static final ThemeData lightTheme = ThemeData(
-    primarySwatch: Colors.grey,
+    colorSchemeSeed: Colors.grey,
+    // primarySwatch: Colors.grey,
+    // secondaryHeaderColor: Colors.teal,
     fontFamily: 'Montserrat',
 
     textTheme: const TextTheme(

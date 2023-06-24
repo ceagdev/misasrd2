@@ -2,16 +2,11 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-import 'package:misasrd2/main.dart';
-
-import '../../../flavors/flavors.dart';
 import '../../../homescreen/presentation/pages/listaiglesias.dart';
 
-// import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:my_app/core/usecases/get_iglesias.dart.dart';
-// import 'package:my_app/feature_lista_iglesias/presentation/lista_iglesias_screen.dart';
-
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
